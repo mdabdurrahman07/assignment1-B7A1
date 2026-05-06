@@ -4,7 +4,7 @@ const filterEvenNumbers = (input: number[]): number[] => {
   const filter = input.filter((even) => even % 2 === 0);
   return filter;
 };
-console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6]));
+
 
 // Problem 2
 
@@ -12,7 +12,7 @@ const reverseString = (input: string): string => {
   const reverse = input.split("").reverse().join("");
   return `"${reverse}"`;
 };
-console.log(reverseString("typescript"));
+
 
 // Problem 3
 
@@ -26,17 +26,14 @@ const checkType = (input: Input) => {
   }
 };
 
-console.log(checkType("Hello"));
-console.log(checkType(42));
+
 
 // Problem 4
 
 const getProperty = <T>(obj: T, key: keyof T) => {
   return `"${obj[key]}"`;
 };
-const user = { id: 1, name: "John Doe", age: 21 };
-const result = getProperty(user, "name");
-console.log(result);
+
 
 // Problem 5
 
@@ -53,13 +50,7 @@ const toggleReadStatus = (book: Book) => {
   };
 };
 
-console.log(
-  toggleReadStatus({
-    title: "TypeScript Guide",
-    author: "Jane Doe",
-    publishedYear: 2024,
-  }),
-);
+
 
 // Problem 6
 
@@ -82,12 +73,9 @@ class Student extends Person {
     return `"Name:${this.name}, Age:${this.age}, Grade:${this.grade}"`;
   }
 }
-const student = new Student("Alice", 20, "A");
-console.log(student.getDetails());
 
 // Problem 7
 
 const getIntersection = (value1: number[], value2: number[]): number[] => {
   return value1.filter((value) => value2.includes(value));
 };
-console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))

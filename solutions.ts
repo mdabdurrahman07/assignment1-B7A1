@@ -79,8 +79,15 @@ class Student extends Person {
     this.grade = grade;
   }
   getDetails() {
-    return `"Name:${this.name}, Age:${this.age}, Grade:${this.grade}"`
+    return `"Name:${this.name}, Age:${this.age}, Grade:${this.grade}"`;
   }
 }
 const student = new Student("Alice", 20, "A");
-console.log(student.getDetails())
+console.log(student.getDetails());
+
+// Problem 7
+
+const getIntersection = (value1: number[], value2: number[]): number[] => {
+  return value1.filter((value) => value2.includes(value));
+};
+console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
